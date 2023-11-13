@@ -1,14 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,ts}",
+    "./src/**/*.{html,ts}"
   ],
   theme: {
-    extend: {},
-    color: {
-      "flax": "#EDD382",
-      "Eerie-black": "#191919",
-      "Bittersweet": "#E87461",
+    extend: {
+      colors: {
+        'flax': '#EDD382',
+        'eerie-black': '#191919',
+        'bitter-sweet': '#E87461',
+      },
+      fontFamily: {
+        'Inconsolata': "'Inconsolata'"
+      }
     }
   },
   plugins: [],

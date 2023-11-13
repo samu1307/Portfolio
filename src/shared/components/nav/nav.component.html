@@ -1,9 +1,22 @@
-<button class="w-full h-full p-2">
-    <i class="las la-home"></i>
-</button>
-<button class="w-full h-full p-2">
-    <i class="las la-home"></i>
-</button>
-<button class="w-full h-full p-2">
-    <i class="las la-home"></i>
+<div class="overflow-y-clip h-0 transition-all duration-500 opacity-0" [ngClass]="{'menuActive': hMenu}">
+    <button class="btn-nav secBtnMenuActive">
+        <i class="las la-home"></i>
+        <p>Home</p>
+    </button>
+    <button class="btn-nav mt-2">
+        <i class="las la-suitcase"></i>
+        <p>Proyects</p>
+    </button>
+    <button class="btn-nav mt-2">
+        <i class="las la-recycle"></i>
+        <p>Recicly</p>
+    </button>
+</div>
+<button 
+    (click)="menuAction()"
+    [ngClass]="{'btnMenuActive': aBtnMenu}"
+    class="btn-nav p-1 transition-all duration-500 "
+>
+    <i class="las la-bars m"></i> 
+    <i class="las la-times x hidden opacity-0"></i> 
 </button>

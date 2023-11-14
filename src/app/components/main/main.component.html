@@ -1,8 +1,7 @@
-<h1 (mousemove)="onMouseOver()" class="font-Inconsolata font-bold text-white textAnimation">
-    Programador <br>
-    <span class="h-20 flex flex-row">
-        @for (letter of text; track text) { {{ letter }} }
-        <span class="ml-6 border cursorAnimation"></span>
-    </span>
-</h1>
-
+<div class="w-screen h-screen bg-eerie-black p-40 flex items-center flex-row justify-between contMain">
+    <app-h1 (colorBorder)="getColor($event)" class=""></app-h1>
+    <div class="">{{ color }}</div>
+    <div [ngStyle]="{borderColor: color}" class="rounded-fullborder overflow-hidden aspect-square flex justify-center items-center photoCont">
+        <img src="../../../assets/img/photo.jpg" class="">
+    </div>
+</div>

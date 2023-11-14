@@ -1,66 +1,24 @@
-import { Component, HostListener, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { H1Component } from '../h1/h1.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    H1Component,
+  ],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
+export class MainComponent implements OnInit {
 
-  text: string[] = ['C', 'r', 'e', 'a', 't', 'i', 'v', 'o'];
-  words: string[][] = [
-    ['A', 'u', 't', 'o', 'd', 'i', 'd', 'a', 'c', 't', 'a'],
-    ['I', 'n', 'n', 'o', 'v', 'a', 'd', 'o', 'r'],
-    ['C', 'r', 'e', 'a', 't', 'i', 'v', 'o']
-  ]
-  action: boolean = false;
+  color: string = '#06D6A0';
 
-  onMouseOver() {
-    if (!this.action) {
-      this.animationText();
-      this.action = true;  // Marca que la animación se ha ejecutado
-    }
+  getColor(colorBorder: string) {
+    this.color = colorBorder;
   }
 
-  async animationText() {
-    await this.removeText(this.text);
-    await this.delay(1000);
-    while (true) {
-      for (let i = 0; i < this.words.length; i++) {
-        await this.addText(this.words[i]);
-        await this.delay(4000);
-        await this.removeText(this.words[i]);
-      }
-    }
-  }
-
-  addText(arr: string[]): Promise<void> {
-    return new Promise<void>(resolve => {
-      arr.forEach((l, i) => {
-        setTimeout(() => {
-          this.text.push(l);
-          if (i === arr.length - 1) resolve();
-        }, (i + 1) * 100);
-      });
-    });
-  }
-
-  removeText(arr: string[]): Promise<void> {
-    return new Promise<void>(resolve => {
-      for (let i = 0; i < arr.length; i++) {
-        setTimeout(() => {
-          this.text.pop();
-          if (i === arr.length - 1) resolve();
-        }, (i + 1) * 100);
-      }
-    });
-  }
-
-  delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+  ngOnInit(): void {}
 }
-

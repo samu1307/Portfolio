@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,8 +8,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './h1.component.html',
   styleUrl: './h1.component.scss'
 })
-export class H1Component implements OnInit, OnChanges{
+export class H1Component implements OnInit{
 
+  @Input() color: string = '#275DAD';
   @Output() colorBorder = new EventEmitter<string>();
 
   constructor() {
@@ -17,8 +18,7 @@ export class H1Component implements OnInit, OnChanges{
   }
 
   text: string[] = ['C', 'r', 'e', 'a', 't', 'i', 'v', 'o'];
-  colors: string[] = ['#E87461', '#EDD382', '#06D6A0'];
-  color: string = '#06D6A0';
+  colors: string[] = ['#E87461', '#EDD382', '#275DAD'];
   words: string[][] = [
     ['A', 'u', 't', 'o', 'd', 'i', 'd', 'a', 'c', 't', 'a'],
     ['I', 'n', 'n', 'o', 'v', 'a', 'd', 'o', 'r'],
@@ -30,16 +30,6 @@ export class H1Component implements OnInit, OnChanges{
     const observer = new IntersectionObserver(this.onIntersection, { threshold: 0.5 });
     const element = document.querySelector('h1');
     if (element) observer.observe(element);
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if(changes['color']){
-      this.sendColor();
-    }
-  }
-
-  sendColor(){
-    this.colorBorder.emit(this.color)
   }
 
   onIntersection(entries: { intersectionRatio: number; }[]) {
@@ -59,6 +49,7 @@ export class H1Component implements OnInit, OnChanges{
       for (let i = 0; i < this.words.length; i++){
         let number = Math.floor(Math.random() * 3)
         this.color = this.colors[number];
+        this.colorBorder.emit(this.color)
         await this.addText(this.words[i]);
         await this.delay(4000);
         await this.removeText(this.words[i]);

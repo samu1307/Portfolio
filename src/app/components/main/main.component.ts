@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { H1Component } from '../h1/h1.component';
 
@@ -12,13 +12,19 @@ import { H1Component } from '../h1/h1.component';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent{
 
-  color: string = '#06D6A0';
+  aspect: string = '1 / 1';
+  color: string = '#275DAD';
+  gradient: string = 'radial-gradient(farthest-corner circle at 50% 50%, white 0%, 2%, #424242 70% 0%);';
 
-  getColor(colorBorder: string) {
-    this.color = colorBorder;
+  getColor(colorBorder: string) {  
+    if (colorBorder !== this.color) {
+      this.color = colorBorder;
+      let number1 = Math.random() + 1;
+      let number2 = Math.random() + 1;
+      this.aspect = `${number1} / ${number2}`
+    }
   }
 
-  ngOnInit(): void {}
 }

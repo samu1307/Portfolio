@@ -1,3 +1,11 @@
-.photoCont{
+@import '../../../shared/styles/variables.scss';
+
+.photoCont {
     width: 30%;
+    position: relative;
+    box-shadow: 0 0 800px 60px currentColor;
+}
+
+.contMain {
+    background-color: $eerie-black;
 }

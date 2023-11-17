@@ -1,0 +1,47 @@
+#btnAboutMe {
+    box-shadow: -3px 3px 0 2px currentColor;
+    transform: translate(3px, -3px);
+    transition: all .3s ease-in-out;
+    
+    span {
+        height: calc(100% - .5rem);
+        animation: {
+            duration: .5s;
+            delay: .3s;
+            timing-function: ease-in-out;
+            fill-mode: forwards;
+            play-state: paused;
+        }
+        transition: all .2s .2s ease-in-out;
+        font: {family: 'Line Awesome Free'; weight: 900;}
+    }
+
+    &:hover {
+        box-shadow: none;
+        transform: translate(0);
+        span {
+            top: 0;
+            right: 0;
+            height: 2.5rem;
+            width: 100%;
+            // animation-name: spanAboutMe;
+            // animation-play-state: running;
+        }
+    }
+}
+
+@keyframes spanAboutMe {
+    from {
+        height: calc(100% - 0.5rem);
+        width: calc(2.5rem - 0.5rem);
+        top: 0.25rem;
+        right: 0.25rem;
+    }
+
+    to {
+        top: 0;
+        right: 0;
+        width: calc(100%);
+        height: calc(100%);
+    }
+}

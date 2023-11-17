@@ -1,14 +1,14 @@
-import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-h1',
+  selector: 'app-text-animated',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './h1.component.html',
-  styleUrl: './h1.component.scss'
+  templateUrl: './text-animated.component.html',
+  styleUrl: './text-animated.component.scss'
 })
-export class H1Component implements OnInit{
+export class TextAnimatedComponent implements OnInit{
 
   @Input() color: string = '#275DAD';
   @Output() colorBorder = new EventEmitter<string>();
@@ -17,42 +17,49 @@ export class H1Component implements OnInit{
     this.onIntersection = this.onIntersection.bind(this);
   }
 
-  text: string[] = ['C', 'r', 'e', 'a', 't', 'i', 'v', 'o'];
+  words: string[] = ['Front-End', 'Back-End', 'Design'];
+  wordsToArray: string[][] = this.toArray(this.words);
+  text: string[] = this.wordsToArray[0];
   colors: string[] = ['#E87461', '#EDD382', '#275DAD'];
-  words: string[][] = [
-    ['F', 'r', 'o', 'n', 't', '-', 'E', 'n', 'd'],
-    ['B', 'a', 'c', 'k', '-', 'E', 'n', 'd'],
-    ['D', 'e', 's', 'i', 'g', 'n']
-  ]
   isIntersectionAction: boolean = false;
 
   ngOnInit() {
     const observer = new IntersectionObserver(this.onIntersection, { threshold: 0.5 });
-    const element = document.querySelector('h1');
+    const element = document.querySelector('h2');
     if (element) observer.observe(element);
   }
 
   onIntersection(entries: { intersectionRatio: number; }[]) {
     entries.forEach(async (entry: { intersectionRatio: number; }) => {
       if (entry.intersectionRatio > 0.5 && !this.isIntersectionAction) {
-        await this.delay(2000)
         this.animationText();
         this.isIntersectionAction = true;
       }
     });
   }
 
+  toArray(words: string[]): string[][] {
+    const result: string[][] = [];
+    words.forEach((word) => {
+      const wordArray = Array.from(word);
+      result.push(wordArray);
+    });
+    return result;
+  }
+
   async animationText(): Promise<void> {
+    await this.delay(2000)
+    console.log('gla')
     await this.removeText(this.text);
     await this.delay(500);
     while (true) {
       for (let i = 0; i < this.words.length; i++){
         let number = Math.floor(Math.random() * 3)
-        this.color = this.colors[number];
-        this.colorBorder.emit(this.color)
-        await this.addText(this.words[i]);
+        // this.color = this.colors[number];
+        // this.colorBorder.emit(this.color)
+        await this.addText(this.wordsToArray[i]);
         await this.delay(4000);
-        await this.removeText(this.words[i]);
+        await this.removeText(this.wordsToArray[i]);
       }
     }
   }
@@ -72,8 +79,10 @@ export class H1Component implements OnInit{
     return new Promise<void>(resolve => {
       for (let i = 0; i < arr.length; i++) {
         setTimeout(() => {
+          console.log(i)
+          console.log(arr.length)
           this.text.pop();
-          if (i === arr.length - 1) resolve();
+          if (arr.length === 1) resolve();
         }, (i + 1) * 100);
       }
     });

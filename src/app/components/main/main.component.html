@@ -1,37 +1,29 @@
-<header class="w-screen h-screen p-24 flex items-center flex-row justify-between bg-eerie-black">
-    <app-card-info-main class="w-[50%] h-full"></app-card-info-main>
-    <div class="w-[50%] h-full flex items-center justify-center">
-        <picture [ngStyle]="{ borderColor: color, color: color, 'aspect-ratio': aspect}"
-            class="rounded-full transition-all duration-1000 border-4 overflow-hidden flex justify-center items-center w-[70%] relative">
-            <img src="../../../assets/img/photo.avif" alt="Foto de Samuel Sarmiento">
+<header class="w-screen h-screen p-24 flex items-center flex-row justify-between bg-eerie-black relative [&>i]:absolute [&>i]:-z-10">
+    <app-card-info-main class="max-w-[50%] relative flex justify-center items-center"></app-card-info-main>
+    <div class="max-w-[50%] flex items-center justify-center">
+        <picture [ngStyle]="{ borderColor: color, color: color}"
+            class="rounded-full transition-all aspect-[1_/_1.3] duration-300 border-4 overflow-hidden flex justify-center items-center w-[70%] relative shadow-[0_0_800px_60px_currentColor]">
+            <img class="w-[25rem]" src="../../../assets/img/photo.avif" alt="Foto de Samuel Sarmiento">
         </picture>
     </div>
+
+    <i class="lab la-angular"></i>
+    <i class="lab la-js-square"></i>
+    <i class="lab la-node-js"></i>
+    <i class="lab la-npm"></i>
+    <i class="lab la-html5"></i>
+    <i class="las la-code"></i>
 </header>
-
-<!-- Angular -->
-<!-- <i class="lab la-angular"></i> -->
-
-<!-- JavaScript -->
-<!-- <i class="lab la-js-square"></i> -->
-
-<!--NodeJs -->
-<!-- <i class="lab la-node-js"></i> -->
-
-<!-- npm -->
-<!-- <i class="lab la-npm"></i> -->
-
 <!-- HTML -->
-<!-- <i class="lab la-html5"></i> -->
-
-<!-- Code -->
-<!-- <i class="las la-code"></i> -->
-
-<!-- Github -->
-<!-- <i class="lab la-github"></i> -->
-
+<!-- Angular -->
 <!-- Linkedin -->
 <!-- <i class="lab la-linkedin-in"></i> -->
-
+<!-- <i class="lab la-github"></i> -->
+<!-- JavaScript -->
 <!-- Arrow Right -->
 <!-- <i class="las la-arrow-right"></i> -->
 <!-- \f061 -->
+<!--NodeJs -->
+<!-- Github -->
+<!-- Code -->
+<!-- npm -->

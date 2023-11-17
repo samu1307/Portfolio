@@ -14,4 +14,5 @@ import { TextAnimatedComponent } from '../text-animated/text-animated.component'
 })
 export class CardInfoMainComponent {
 
+
 }

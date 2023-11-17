@@ -1,6 +1,37 @@
-<div class="w-screen h-screen p-40 flex items-center flex-row justify-between contMain">
-    <app-h1 (colorBorder)="getColor($event)" class=""></app-h1>
-    <div [ngStyle]="{ borderColor: color, color: color, 'aspect-ratio': aspect}" class="rounded-full transition-all duration-1000 border-4 overflow-hidden flex justify-center items-center photoCont">
-        <img src="../../../assets/img/photo.jpg" >
+<header class="w-screen h-screen p-24 flex items-center flex-row justify-between bg-eerie-black">
+    <app-card-info-main class="w-[50%] h-full"></app-card-info-main>
+    <div class="w-[50%] h-full flex items-center justify-center">
+        <picture [ngStyle]="{ borderColor: color, color: color, 'aspect-ratio': aspect}"
+            class="rounded-full transition-all duration-1000 border-4 overflow-hidden flex justify-center items-center w-[70%] relative">
+            <img src="../../../assets/img/photo.avif" alt="Foto de Samuel Sarmiento">
+        </picture>
     </div>
-</div>
+</header>
+
+<!-- Angular -->
+<!-- <i class="lab la-angular"></i> -->
+
+<!-- JavaScript -->
+<!-- <i class="lab la-js-square"></i> -->
+
+<!--NodeJs -->
+<!-- <i class="lab la-node-js"></i> -->
+
+<!-- npm -->
+<!-- <i class="lab la-npm"></i> -->
+
+<!-- HTML -->
+<!-- <i class="lab la-html5"></i> -->
+
+<!-- Code -->
+<!-- <i class="las la-code"></i> -->
+
+<!-- Github -->
+<!-- <i class="lab la-github"></i> -->
+
+<!-- Linkedin -->
+<!-- <i class="lab la-linkedin-in"></i> -->
+
+<!-- Arrow Right -->
+<!-- <i class="las la-arrow-right"></i> -->
+<!-- \f061 -->

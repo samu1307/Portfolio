@@ -1,11 +1,4 @@
-@import '../../../shared/styles/variables.scss';
-
-.textAnimation{
-    font-size: 3.5rem;
-    line-height: 100%;
-    letter-spacing: .4rem;
-    text-shadow: 0 0 15px currentColor;
-}
+.textAnimation{text-shadow: 0 0 15px currentColor;}
 
 .cursorAnimation{
     animation: cursorExpand 1.3s infinite ease-in-out;

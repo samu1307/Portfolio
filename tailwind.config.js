@@ -9,9 +9,14 @@ module.exports = {
         'flax': '#EDD382',
         'eerie-black': '#191919',
         'bitter-sweet': '#E87461',
+        'blue-neon' : '#275DAD'
       },
       fontFamily: {
-        'Inconsolata': "'Inconsolata'"
+        'Inconsolata': "Inconsolata",
+        'kanit': 'Kanit'
+      },
+      dropShadow: {
+        'text-neon': '0 0 3px currentColor'
       }
     }
   },

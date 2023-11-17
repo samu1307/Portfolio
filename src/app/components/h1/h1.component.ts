@@ -20,9 +20,9 @@ export class H1Component implements OnInit{
   text: string[] = ['C', 'r', 'e', 'a', 't', 'i', 'v', 'o'];
   colors: string[] = ['#E87461', '#EDD382', '#275DAD'];
   words: string[][] = [
-    ['A', 'u', 't', 'o', 'd', 'i', 'd', 'a', 'c', 't', 'a'],
-    ['I', 'n', 'n', 'o', 'v', 'a', 'd', 'o', 'r'],
-    ['C', 'r', 'e', 'a', 't', 'i', 'v', 'o']
+    ['F', 'r', 'o', 'n', 't', '-', 'E', 'n', 'd'],
+    ['B', 'a', 'c', 'k', '-', 'E', 'n', 'd'],
+    ['D', 'e', 's', 'i', 'g', 'n']
   ]
   isIntersectionAction: boolean = false;
 

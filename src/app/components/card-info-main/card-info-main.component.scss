@@ -1,0 +1,32 @@
+#btnAboutMe{
+    box-shadow: -3px 3px 0 2px currentColor;
+    transform: translate(3px, -3px);
+    transition: all .3s ease-in-out;
+    span{
+        height: calc(100% - .5rem);
+        animation: {duration: .5s; delay: .3s; timing-function: ease-in-out; fill-mode: both; play-state: paused;};
+        font: {family: 'Line Awesome Free'; weight: 900;};
+    }
+    &:hover{
+        box-shadow: none;
+        transform: translate(0);
+        span{
+            // transition: all .3s;
+            animation: {name: spanAbpuoMe; play-state: running;};
+        }
+    }
+}
+
+@keyframes spanAbpuoMe {
+    from{
+        height: calc(100% - .5rem);
+        width: calc(2.5rem - .5rem);
+        top: .25rem;
+        right: .25rem;
+    }
+    to{
+        top: 0; right: 0;
+        width: calc(100%);
+        height: calc(100%);
+    }
+}

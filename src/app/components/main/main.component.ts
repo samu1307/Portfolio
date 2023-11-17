@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { H1Component } from '../h1/h1.component';
+import { CardInfoMainComponent } from '../card-info-main/card-info-main.component';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +9,7 @@ import { H1Component } from '../h1/h1.component';
   imports: [
     CommonModule,
     H1Component,
+    CardInfoMainComponent
   ],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']

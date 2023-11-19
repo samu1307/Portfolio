@@ -1,16 +1,16 @@
-<div class="container w-14 p-2 fixed right-6 bottom-6 transition-all duration-500">
+<div class="container w-14 p-2 fixed right-6 bottom-6 transition-all duration-500 z-50">
     <div class="overflow-y-clip h-0 transition-all duration-500 opacity-0" [ngClass]="{'menuActive': hMenu}">
         <button class="btn-nav secBtnMenuActive">
             <i class="las la-home"></i>
-            <p>Home</p>
+            <p>Inicio</p>
         </button>
         <button class="btn-nav mt-2">
             <i class="las la-suitcase"></i>
-            <p>Proyects</p>
+            <p>Sobre mi</p>
         </button>
         <button class="btn-nav mt-2">
             <i class="las la-recycle"></i>
-            <p>Recicly</p>
+            <p>Habilidades</p>
         </button>
     </div>
     <button (click)="menuAction()" [ngClass]="{'btnMenuActive': aBtnMenu}"

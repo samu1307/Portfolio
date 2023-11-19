@@ -6,6 +6,12 @@
 
 @font-face {
     font-family: 'Kanit';
-    src: url('../../assets/fonts/Kanit/Kanit-Thin.ttf') format('truetype');
-    font-weight: 100;
+    src: url('../../assets/fonts/Kanit/Kanit-SemiBold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('../../assets/fonts/Kanit/Kanit-Light.ttf') format('truetype');
+    font-weight: 300;
 }

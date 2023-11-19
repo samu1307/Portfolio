@@ -17,9 +17,9 @@ export class TextAnimatedComponent implements OnInit{
     this.onIntersection = this.onIntersection.bind(this);
   }
 
-  words: string[] = ['Front-End', 'Back-End', 'Design'];
+  words: string[] = ['Front-End', 'Back-End', 'Design✨'];
   wordsToArray: string[][] = this.toArray(this.words);
-  text: string[] = this.wordsToArray[0];
+  text: string[] = ['F','r','o','n','t','-','E','n','d'];
   colors: string[] = ['#E87461', '#EDD382', '#275DAD'];
   isIntersectionAction: boolean = false;
 
@@ -48,18 +48,18 @@ export class TextAnimatedComponent implements OnInit{
   }
 
   async animationText(): Promise<void> {
+    let primary = true;
     await this.delay(2000)
-    console.log('gla')
-    await this.removeText(this.text);
-    await this.delay(500);
+    await this.removeText();
     while (true) {
-      for (let i = 0; i < this.words.length; i++){
+      for (let i = 0; i < this.wordsToArray.length; i++){
+        if(primary) {i = 1; primary = false;}
         let number = Math.floor(Math.random() * 3)
-        // this.color = this.colors[number];
-        // this.colorBorder.emit(this.color)
+        this.color = this.colors[number];
+        this.colorBorder.emit(this.color)
         await this.addText(this.wordsToArray[i]);
         await this.delay(4000);
-        await this.removeText(this.wordsToArray[i]);
+        await this.removeText();
       }
     }
   }
@@ -69,20 +69,18 @@ export class TextAnimatedComponent implements OnInit{
       arr.forEach((l, i) => {
         setTimeout(() => {
           this.text.push(l);
-          if (i === arr.length - 1) resolve();
+          if (arr.length === i + 1) resolve();
         }, (i + 1) * 100);
       });
     });
   }
 
-  removeText(arr: string[]): Promise<void> {
+  removeText(): Promise<void> {
     return new Promise<void>(resolve => {
-      for (let i = 0; i < arr.length; i++) {
+      for (let i = 0; i < this.text.length; i++) {
         setTimeout(() => {
-          console.log(i)
-          console.log(arr.length)
           this.text.pop();
-          if (arr.length === 1) resolve();
+          if (this.text.length === 0) resolve();
         }, (i + 1) * 100);
       }
     });

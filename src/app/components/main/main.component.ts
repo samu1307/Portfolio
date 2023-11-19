@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { H1Component } from '../h1/h1.component';
 import { CardInfoMainComponent } from '../card-info-main/card-info-main.component';
 
 @Component({
@@ -8,7 +7,6 @@ import { CardInfoMainComponent } from '../card-info-main/card-info-main.componen
   standalone: true,
   imports: [
     CommonModule,
-    H1Component,
     CardInfoMainComponent
   ],
   templateUrl: './main.component.html',

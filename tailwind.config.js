@@ -9,7 +9,8 @@ module.exports = {
         'flax': '#EDD382',
         'eerie-black': '#191919',
         'bitter-sweet': '#E87461',
-        'blue-neon' : '#275DAD'
+        'blue-neon' : '#275DAD',
+        'alice-blue':'#EBF2FA',
       },
       fontFamily: {
         'Inconsolata': "Inconsolata",

@@ -1,4 +1,4 @@
-<div class="container w-14 p-2 fixed right-6 bottom-6 transition-all duration-500 z-50">
+<div class="container w-14 p-2 fixed right-6 bottom-6 transition-all duration-500 z-50 [&_i]:text-xl">
     <div class="overflow-y-clip h-0 transition-all duration-500 opacity-0" [ngClass]="{'menuActive': hMenu}">
         <button class="btn-nav secBtnMenuActive">
             <i class="las la-home"></i>
@@ -15,7 +15,8 @@
     </div>
     <button (click)="menuAction()" [ngClass]="{'btnMenuActive': aBtnMenu}"
         class="btn-nav p-1 transition-all duration-500 ">
-        <i class="las la-bars m"></i>
+        <!-- <i class="las la-bars m"></i> -->
+        <i class="las la-cog m"></i>
         <i class="las la-times x hidden opacity-0"></i>
     </button>
 </div>

@@ -17,20 +17,4 @@ ul{
     }
 }
 
-picture{
-    &::after{
-        content: '\f107';
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 20%;
-        margin: auto;
-        font-family: '';
-        cursor: pointer;
-        position: absolute;
-        border-radius: 50%;
-        aspect-ratio: 1 / 1;
-        background: $blue-neon;
-        transform: translateY(-50%);
-    }
-}
+.infoView{transform: translateY(0);}

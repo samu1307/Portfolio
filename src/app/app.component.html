@@ -1,19 +1,28 @@
 <app-nav class="relative z-100"></app-nav>
 <app-main class="w-screen h-screen flex items-center flex-col overflow-x-hidden overflow-y-scroll"></app-main>
 <main>
-    <section id="aboutMe" class="w-screen h-[70vh] bg-eerie-black px-24 flex flex-row justify-between overflow-hidden">
-        <div class="scrollContainer w-[95%] h-full py-10 pl-2 flex flex-col gap-5 overflow-y-scroll">
-            <app-about-me id="music" [url]="'../../../assets/img/note.png'" [alt]="'Imagen de nota musical'" [color]="'#EDD382'" [tittle]="'Música'" [descrip]="descri" class="w-full h-full flex flex-row justify-between shadow-[0_5px_0] shadow-flax border-[2px] border-flax rounded-lg"></app-about-me>
-            <app-about-me id="design" [url]="'../../../assets/img/design.png'" [alt]="'Imagen de ilustración de diseño'" [color]="'#E87461'" [tittle]="'Diseño'" [descrip]="descri" class="w-full h-full flex flex-row justify-between shadow-[0_5px_0] shadow-bitter-sweet border-[2px] border-bitter-sweet rounded-lg"></app-about-me>
-            <app-about-me id="code" [url]="'../../../assets/img/note.png'" [alt]="'Imagen de icono de programador'" [color]="'#275DAD'" [tittle]="'Codigo'" [descrip]="descri" class="w-full h-full flex flex-row justify-between shadow-[0_5px_0] shadow-blue-neon border-[2px] border-blue-neon rounded-lg"></app-about-me>
+    <section class="w-screen h-[300vh] bg-eerie-black">
+        <div id="aboutMe" class="w-full h-[90vh] py-12 px-10 overflow-hidden sticky top-0 left-0">
+            <div
+                class="scrollContainer w-[500vh] h-full grid grid-cols-[repeat(3,minmax(75vw,1fr))] grid-rows-[minmax(0,100%)] gap-14">
+                <app-about-me id="music" [url]="'../../../assets/img/note.png'" [alt]="'Imagen de nota musical'"
+                    [color]="'#EDD382'" [tittle]="'Música'" [descrip]="descri"
+                    class="w-full h-full flex flex-row items-center justify-between shadow-[0_5px_0] shadow-flax border-[2px] border-flax rounded-lg"></app-about-me>
+                <app-about-me id="design" [url]="'../../../assets/img/design.png'"
+                    [alt]="'Imagen de ilustración de diseño'" [color]="'#E87461'" [tittle]="'Diseño'" [descrip]="descri"
+                    class="w-full h-full flex flex-row items-center justify-between shadow-[0_5px_0] shadow-bitter-sweet border-[2px] border-bitter-sweet rounded-lg"></app-about-me>
+                <app-about-me id="code" [url]="'../../../assets/img/code.png'" [alt]="'Imagen de icono de programador'"
+                    [color]="'#275DAD'" [tittle]="'Codigo'" [descrip]="descri"
+                    class="w-full h-full flex flex-row items-center justify-between shadow-[0_5px_0] shadow-blue-neon border-[2px] border-blue-neon rounded-lg"></app-about-me>
+            </div>
         </div>
-        <div class="w-[5%] h-full mt-10 pl-5">
+        <!-- <div class="w-full h-full mt-10 pl-5">
             <ul class="h-full font-kanit text-lg text-white flex flex-col gap-4">
                 <li style="writing-mode: vertical-lr;" class="h-auto hover:text-flax"><button>Musica</button></li>
                 <li style="writing-mode: vertical-lr;" class="h-auto hover:text-bitter-sweet"><button>Diseño</button></li>
                 <li style="writing-mode: vertical-lr;" class="h-auto hover:text-blue-neon"><button>Codigo</button></li>
             </ul>
-        </div>
+        </div> -->
     </section>
 </main>
 <app-main class="w-screen h-screen flex items-center flex-col overflow-x-hidden overflow-y-scroll"></app-main>

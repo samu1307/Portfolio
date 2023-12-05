@@ -1,6 +1,10 @@
-<picture class="w-[60%] flex justify-center items-center">
-    <img [ngStyle]="{'color': color}" class="w-auto h-[90%] drop-shadow-[0_0_10px_#000000a6]" [src]="url" [alt]="alt">
-</picture>
+@defer (){
+    <picture class="w-[60%] flex justify-center items-center">
+        <img [ngStyle]="{'color': color}" class="w-auto h-[90%] drop-shadow-[0_0_10px_#000000a6]" [src]="url" [alt]="alt">
+    </picture>
+}   
+@placeholder { <p>.</p> }
+@error { <p>Error</p> }
 <div class="w-[40%] pr-20">
     <h3 [ngStyle]="{'color': color}" style="-webkit-text-fill-color: #191919;-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: currentColor;" class="font-Inconsolata translate-x-1 font-bold text-6xl drop-shadow-[-2px_2px_0px_currentColor]">{{ tittle }}</h3>
     <p class="font-kanit text-lg text-alice-blue">{{ descrip }}</p>

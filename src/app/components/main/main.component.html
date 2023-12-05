@@ -1,48 +1,42 @@
 <header id="home"
-    class="w-screen h-screen py-12 px-24 bg-alice-blue relative flex justify-between flex-col [&>i]:absolute [&>i]:z-0 [&>i]:cursor-pointer [&>i]:text-5xl">
+    class="max-w-5xl h-screen py-12 px-28 m-[0_auto] relative grid grid-cols-[minmax(0,auto)_minmax(0,1fr)] grid-rows-[minmax(0,auto)_minmax(0,1fr)] gap-[3rem_4rem] [&>i]:absolute [&>i]:z-0 [&>i]:cursor-pointer [&>i]:text-5xl">
     <nav
-        class="w-full bg-alice-blue px-12 py-3 flex flexr-row justify-between sticky top-0 left-0 border-[2px] border-blue-neon rounded-lg shadow-[0px_5px_0] shadow-blue-neon">
+        class="bg-alice-blue col-span-full h-fit row-span-1 px-12 py-3 flex flexr-row justify-between border-[2px] border-blue-neon rounded-lg shadow-[0px_5px_0] shadow-blue-neon">
         <a href="/" class="font-kanit font-[700] text-xl text-blue-neon">SAMUEL✨</a>
         <ul class="flex flex-row gap-x-6 font-kanit font-[300] [&>li]:flex [&>li]:items-center">
             <li class=""><a href="#home" class="">Inicio</a></li>
             <li class=""><a href="#aboutMe" class="">Sobre mi</a></li>
-            <li class=""><a href="" class="">Habilidades</a></li>
+            <li class=""><a href="#proyects" class="">Proyectos</a></li>
+            <li class=""><a href="#" class="">Habilidades</a></li>
         </ul>
     </nav>
-    <div class="w-full flex flex-row justify-between items-center">
-        <app-card-info-main
-            class="max-w-[50%] relative flex justify-center items-center translate-x-[7.5px]"></app-card-info-main>
-        <picture [ngStyle]="{ borderColor: color, color: color}"
-            class="rounded-3xl translate-x-[-7px] shadow-[0px_5px_0] shadow-blue-neon border-2 overflow-hidden flex justify-center items-center relative">
-            <i (click)="openInfo(info, btnInfo)" #btnInfo
-                class="las la-angle-down w-[20%] pb-1 items-end justify-center aspect-square flex absolute top-0 left-0 right-0 m-auto rounded-full bg-blue-neon -translate-y-[65%] cursor-pointer hover:-translate-y-[50%] hover:pb-2 transition-[transform,padding] duration-300 text-alice-blue"></i>
-            <div #info
-                class="infoCard h-[50%] transition-transform duration-300 ease-in-out bg-blue-neon absolute top-0 left-0 w-full flex flex-col justify-start items-center -translate-y-[100%]">
-                <h5 class="font-kanit font-[700] text-alice-blue">Samuel Sarmiento</h5>
-                <p class="font-kanit font-[700] text-alice-blue">Samuel Sarmiento</p>
-            </div>
-            <img class="transition-[filter] ease-in-out duration-300" src="../../../assets/img/photo.avif"
-                alt="Foto de Samuel Sarmiento">
-        </picture>
-    </div>
-
-    <!-- <i class="lab la-angular top-[14vw] left-[] right-[32vw] bottom-[]"></i>
-    <i class="lab la-js-square top-[] left-[32vw] right-[5vw] bottom-[]"></i>
-    <i class="lab la-node-js top-[25vw] left-[] right-[5vw] bottom-[]"></i>
-    <i class="lab la-npm top-[91vw] left-[25vw] right-[] bottom-[]"></i>
-    <i class="lab la-html5 top-[25vw] left-[] right-[25vw] bottom-[]"></i>
-    <i class="las la-code top-[] left-[] right-[1.25rem] bottom-[1.25rem]"></i> -->
+    <app-card-info-main
+        class="h-fit relative flex col-[1] row-[2] items-center"></app-card-info-main>
+    <picture [ngStyle]="{ borderColor: color, color: color}"
+        class="w-full h-full rounded-3xl bg-blue-neon shadow-[0px_5px_0 col-[2] row-[2] shadow-blue-neon border-2 overflow-hidden flex justify-center items-center relative">
+        <i (click)="openInfo(info, btnInfo)" #btnInfo
+            class="las la-angle-down w-[20%] pb-1 items-end justify-center aspect-square flex absolute top-0 left-0 right-0 m-auto rounded-full bg-blue-neon -translate-y-[65%] cursor-pointer hover:-translate-y-[50%] hover:pb-2 transition-[transform,padding] duration-300 text-alice-blue"></i>
+        <div #info
+            class="infoCard w-full px-8 py-4 transition-transform duration-300 ease-in-out bg-blue-neon absolute top-0 left-0 -translate-y-[100%]">
+            <ul class="w-full text-white flex flex-col gap-3">
+                <li><p>
+                    <b>Nombre:</b><br>Samuel Sarmiento Rivas
+                </p></li>
+                <li><p>
+                    <b>Edad:</b><br>18 años
+                </p></li>
+                <li><p>
+                    <b>Origen:</b><br>Bogotá, Colombia
+                </p></li>
+                <li><p>
+                    <b>Profesión:</b> <br>Programador de software, Músico, Diseñador
+                </p></li>
+                <li><p>
+                    <b>Correo:</b><br>rivassamuel.ssr&#64;gmail.com
+                </p></li>
+                <!-- <li><p><b></b></p></li> -->
+            </ul>
+        </div>
+        <img class="h-full object-cover" [src]="img" alt="Foto de Samuel Sarmiento">
+    </picture>
 </header>
-<!-- HTML -->
-<!-- Angular -->
-<!-- Linkedin -->
-<!-- <i class="lab la-linkedin-in"></i> -->
-<!-- <i class="lab la-github"></i> -->
-<!-- JavaScript -->
-<!-- Arrow Right -->
-<!-- <i class="las la-arrow-right"></i> -->
-<!-- \f061 -->
-<!--NodeJs -->
-<!-- Github -->
-<!-- Code -->
-<!-- npm -->

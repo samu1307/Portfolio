@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardInfoMainComponent } from '../card-info-main/card-info-main.component';
 
@@ -12,11 +12,23 @@ import { CardInfoMainComponent } from '../card-info-main/card-info-main.componen
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
+export class MainComponent implements OnInit {
 
+  img!: string;
   aspect: string = '1 / 1';
   color: string = '#275DAD';
   gradient: string = 'radial-gradient(farthest-corner circle at 50% 50%, white 0%, 2%, #424242 70% 0%);';
+
+  ngOnInit(): void {
+    // const userAgent = navigator.userAgent;
+    // const browser = userAgent.includes('Edg')
+
+    // if (browser) {
+    //   this.img = '../../../assets/img/note.png';
+    // } else {
+    //   this.img = '../../../assets/img/photo.avif';
+    // }
+  }
 
   getColor(colorBorder: string) {
     if (colorBorder !== this.color) {

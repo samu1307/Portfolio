@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from '../shared/components/nav/nav.component';
 import { MainComponent } from './components/main/main.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ProyectsComponent } from './components/proyects/proyects.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,9 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     CommonModule,
     NavComponent,
     MainComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ProyectsComponent,
+    SkillsComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

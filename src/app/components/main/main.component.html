@@ -4,16 +4,16 @@
         class="bg-alice-blue col-span-full h-fit row-span-1 px-12 py-3 flex flexr-row justify-between border-[2px] border-blue-neon rounded-lg shadow-[0px_5px_0] shadow-blue-neon">
         <a href="/" class="font-kanit font-[700] text-xl text-blue-neon">SAMUEL✨</a>
         <ul class="flex flex-row gap-x-6 font-kanit font-[300] [&>li]:flex [&>li]:items-center">
-            <li class=""><a href="#home" class="">Inicio</a></li>
-            <li class=""><a href="#aboutMe" class="">Sobre mi</a></li>
-            <li class=""><a href="#proyects" class="">Proyectos</a></li>
-            <li class=""><a href="#" class="">Habilidades</a></li>
+            <li class=""><a href="#home">Inicio</a></li>
+            <li class=""><a href="#aboutMe">Sobre mi</a></li>
+            <li class=""><a href="#proyects">Proyectos</a></li>
+            <li class=""><a href="#">Habilidades</a></li>
         </ul>
     </nav>
     <app-card-info-main
-        class="h-fit relative flex col-[1] row-[2] items-center"></app-card-info-main>
+        class="h-full relative flex col-[1] row-[2] items-center"></app-card-info-main>
     <picture [ngStyle]="{ borderColor: color, color: color}"
-        class="w-full h-full rounded-3xl bg-blue-neon shadow-[0px_5px_0 col-[2] row-[2] shadow-blue-neon border-2 overflow-hidden flex justify-center items-center relative">
+        class="w-full h-full rounded-3xl bg-blue-neon shadow-[0px_5px_0] col-[2] row-[2] shadow-blue-neon border-2 overflow-hidden flex justify-center items-center relative">
         <i (click)="openInfo(info, btnInfo)" #btnInfo
             class="las la-angle-down w-[20%] pb-1 items-end justify-center aspect-square flex absolute top-0 left-0 right-0 m-auto rounded-full bg-blue-neon -translate-y-[65%] cursor-pointer hover:-translate-y-[50%] hover:pb-2 transition-[transform,padding] duration-300 text-alice-blue"></i>
         <div #info

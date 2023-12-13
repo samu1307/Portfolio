@@ -20,14 +20,14 @@ export class MainComponent implements OnInit {
   gradient: string = 'radial-gradient(farthest-corner circle at 50% 50%, white 0%, 2%, #424242 70% 0%);';
 
   ngOnInit(): void {
-    // const userAgent = navigator.userAgent;
-    // const browser = userAgent.includes('Edg')
+    const userAgent = navigator.userAgent;
+    const browser = userAgent.includes('Edg')
 
-    // if (browser) {
-    //   this.img = '../../../assets/img/note.png';
-    // } else {
-    //   this.img = '../../../assets/img/photo.avif';
-    // }
+    if (browser) {
+      this.img = '../../../assets/img/note.png';
+    } else {
+      this.img = '../../../assets/img/photo.avif';
+    }
   }
 
   getColor(colorBorder: string) {
@@ -49,3 +49,4 @@ export class MainComponent implements OnInit {
   }
 
 }
+
